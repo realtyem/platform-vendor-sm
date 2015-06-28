@@ -33,6 +33,9 @@ endif
 ifneq ($(filter %tf300t,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := tf300t
 endif
+ifneq ($(filter %tf101,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := tf101
+endif
 
 
 # Filter ROM base
