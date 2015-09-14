@@ -41,6 +41,11 @@ ifneq ($(filter tf101,$(TARGET_DEVICE)),)
   include $(SM_VENDOR)/device/sm_tf101.mk
   LOCAL_ARCH := arm
 endif
+ifneq ($(filter maya,$(TARGET_DEVICE)),)
+  include $(SM_VENDOR)/device/sm_maya.mk
+  LOCAL_ARCH := arm
+endif
+
 
 # Kernel binary prefix.  The other part of this will go in the kernel source's AndroidKernel.mk.
 # And also in defconfigs (arch/arm/configs/name_defconfig)(or arm64) CONFIG_CROSS_COMPILE="arm-eabi-" (or "aarch64-")

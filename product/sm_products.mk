@@ -37,6 +37,10 @@ ifneq ($(filter %tf101,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := tf101
 endif
 
+ifneq ($(filter %maya,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := maya
+endif
+
 
 # Filter ROM base
 ifneq ($(filter aosp% boostpop% pa% twisted%,$(TARGET_PRODUCT)),)
